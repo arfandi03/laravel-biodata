@@ -14,11 +14,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        User::create([
-            'name'     => 'Administrator',
-            'email'    => 'admin@app.com',
-            'role'    => 'admin',
-            'password' => bcrypt('password'),
-        ]);
+        if (!User::where('email', 'admin@app.com')->exists()) {
+            User::create([
+                'name'     => 'Administrator',
+                'email'    => 'admin@app.com',
+                'role'    => 'admin',
+                'password' => bcrypt('password'),
+            ]);
+        }
     }
 }

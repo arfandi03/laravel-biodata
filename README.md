@@ -12,9 +12,9 @@
     DB_CONNECTION=mysql
     DB_HOST=127.0.0.1
     DB_PORT=3306
-    DB_DATABASE=biodata
+    DB_DATABASE=laravel_biodata
     DB_USERNAME=root
-    DB_PASSWORD=
+    DB_PASSWORD=root
    ```
 5. `php artisan migrate --seed`
 6. `php artisan serve` (http://127.0.0.1:8000)
